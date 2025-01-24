@@ -17,5 +17,7 @@ print(laptop.ship_within_country(SaleInfo(kevin_usa, "Laptop", 1)))
 print("ship closest to buyer")
 print(laptop.closest_to_buyer(SaleInfo(jack_paris, "Laptop", 1)))
 print("stock availability")
+# Expected output ['Montreal', 'Seattle', 'London']
 print(laptop.stock_availability(SaleInfo(tom, "Laptop", 5)))
+# Expected output ['Montreal']
 print(laptop.stock_availability(SaleInfo(kevin_usa, "Laptop", 98)))
