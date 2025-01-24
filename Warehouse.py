@@ -34,6 +34,15 @@ class Product:
                 min_distance = distance
             
         return min_city
+    
+    def stock_availability(self, sale_info):
+        if self.name != sale_info.product:
+            return []
+        cities = []
+        for warehouse in self.warehouses:
+            if warehouse.stock >= sale_info.quantity:
+                cities.append(warehouse.city)
+        return cities
         
         
 

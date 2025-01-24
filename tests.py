@@ -2,8 +2,8 @@ from Warehouse import *
 
 laptop_warehouses = [Warehouse("Toronto", "Canada", [2,2], 1), 
                      Warehouse("Montreal", "Canada", [3,-1], 99), 
-                     Warehouse("Seattle", "USA", [-2,1], 100),
-                     Warehouse("London", "UK", [10,3], 1),]
+                     Warehouse("Seattle", "USA", [-2,1], 5),
+                     Warehouse("London", "UK", [10,3], 10),]
 
 laptop = Product("Laptop", laptop_warehouses)
 
@@ -16,3 +16,6 @@ print(laptop.ship_within_country(SaleInfo(tom, "Laptop", 1)))
 print(laptop.ship_within_country(SaleInfo(kevin_usa, "Laptop", 1)))
 print("ship closest to buyer")
 print(laptop.closest_to_buyer(SaleInfo(jack_paris, "Laptop", 1)))
+print("stock availability")
+print(laptop.stock_availability(SaleInfo(tom, "Laptop", 5)))
+print(laptop.stock_availability(SaleInfo(kevin_usa, "Laptop", 98)))
